@@ -25,6 +25,19 @@ geo = st.sidebar.text_input("Enter country code (leave empty for global):", "")
 st.sidebar.markdown("---")
 st.sidebar.info("💡 Example country codes: `US`, `IN`, `GB`")
 
+# Optional: proxy support
+use_proxy = st.checkbox("Use proxy", value=False)
+proxy_list_input = st.text_area("Enter proxies (one per line, e.g., http://111.111.111.111:8080)", "")
+
+proxies = None
+if use_proxy and proxy_list_input.strip():
+    proxies = [p.strip() for p in proxy_list_input.split("\n")]
+
+# ------------------------------
+# Initialize PyTrends
+# ------------------------------
+pytrends = TrendReq(hl='en-US', tz=360, retries=3, backoff_factor=0.5, proxies=proxies)
+
 # ------------------------------
 # Theme Styles
 # ------------------------------
