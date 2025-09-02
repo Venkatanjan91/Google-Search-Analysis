@@ -63,12 +63,7 @@ _E.g., "cloud computing" vs "artificial intelligence"._
 - **Competitor Benchmarking** → Compare keyword popularity across technologies or brands  
 
 ---
-
-## 🔮 Future Enhancements
-- Build a **Streamlit dashboard** for interactive exploration  
-- Automate **weekly or monthly PDF/Excel reports**  
-- Extend support to **Google News, YouTube, and Shopping trends**  
-- Batch keyword analysis & trend correlations  
+ 
 
 ---
 
