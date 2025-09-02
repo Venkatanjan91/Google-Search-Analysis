@@ -82,7 +82,7 @@ if st.button("🚀 Run Analysis"):
     else:
         try:
             # Interest over time
-            time.sleep(5)
+            time.sleep(10)
             pytrends.build_payload(kw_list=kw_list, timeframe=timeframe, geo=geo)
             df = pytrends.interest_over_time()
 
@@ -125,7 +125,7 @@ if st.button("🚀 Run Analysis"):
                 st.subheader("🔍 Related Queries")
                 related_queries = pytrends.related_queries()
                 for kw in kw_list:
-                    time.sleep(5)
+                    time.sleep(10)
                     if related_queries and related_queries.get(kw):
                         if related_queries[kw].get("top") is not None:
                             st.markdown(f"**{kw} – Top Queries**")
