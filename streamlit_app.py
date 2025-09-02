@@ -2,6 +2,7 @@ import streamlit as st
 from pytrends.request import TrendReq
 import pandas as pd
 import plotly.express as px
+import time
 
 # ------------------------------
 # Page Config
